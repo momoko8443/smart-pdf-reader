@@ -18,7 +18,7 @@ function App() {
     sefPdfFile(file);
   }
   const [image, setImage] = useState();
-  const startEditHandler = (dataUrl, pageInfo) => {
+  const startCropHandler = (dataUrl, pageInfo) => {
     console.log(dataUrl,pageInfo);
     setMode('editing');
     setImage(dataUrl);
@@ -40,7 +40,7 @@ function App() {
       }
       {
         mode === 'preview' &&
-        <PDFViewer pdfFile={pdfFile} startEdit={startEditHandler} exit={exitPDFViewHandler}></PDFViewer>
+        <PDFViewer pdfFile={pdfFile} startCrop={startCropHandler} exit={exitPDFViewHandler}></PDFViewer>
       }
       {
         mode === 'editing' && 

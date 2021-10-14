@@ -29,27 +29,29 @@ export default function CropperView(props) {
     }
     return (
         <div style={{ height: "100%" }}>
-            <Cropper
-                ref={cropperRef}
-                // style={{ height: "100%", width: "100%" }}
-                zoomTo={1}
-                initialAspectRatio={1}
-                preview=".img-preview"
-                src={props.imageUrl}
-                viewMode={2}
-                minCropBoxHeight={10}
-                minCropBoxWidth={10}
-                background={false}
-                responsive={true}
-                autoCrop={false}
-                autoCropArea={0.1}
-                checkOrientation={false} // https://github.com/fengyuanchen/cropperjs/issues/671
-                guides={false}
-                // crop={onCrop}
-                cropend={onCrop}
-                movable={true}
-                zoomable={false}
-            />
+            <div style={{paddingBottom:'40px'}}>
+                <Cropper
+                    ref={cropperRef}
+                    // style={{ height: "100%", width: "100%" }}
+                    zoomTo={1}
+                    initialAspectRatio={1}
+                    preview=".img-preview"
+                    src={props.imageUrl}
+                    viewMode={2}
+                    minCropBoxHeight={10}
+                    minCropBoxWidth={10}
+                    background={false}
+                    responsive={true}
+                    autoCrop={false}
+                    autoCropArea={0.1}
+                    checkOrientation={false} // https://github.com/fengyuanchen/cropperjs/issues/671
+                    guides={false}
+                    // crop={onCrop}
+                    cropend={onCrop}
+                    movable={true}
+                    zoomable={false}
+                />
+            </div>
             <div className="cropperToolBar">
                 {croppedImg &&
                     <div className="hbox" >
