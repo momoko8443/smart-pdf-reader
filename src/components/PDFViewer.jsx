@@ -31,7 +31,7 @@ export default function PDFViewer(props) {
     }
     function addTemplate() {
         console.log('add template');
-        setMode('edit');
+        // setMode('edit');
         setOpenCreateTemplateModal(true);
     }
 

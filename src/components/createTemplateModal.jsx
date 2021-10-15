@@ -44,7 +44,7 @@ export default function CreateTemplateModal(props) {
         });
         setFields(copyFields);
     }
-    const removeField = (index) => {
+    const removeField = (item, index) => {
         if(index > 0){
             const copyFields = JSON.parse(JSON.stringify(fields));
             copyFields.splice(index,1);
@@ -98,6 +98,7 @@ export default function CreateTemplateModal(props) {
                                         <MenuItem value={'string'}>String</MenuItem>
                                         <MenuItem value={'number'}>Number</MenuItem>
                                         <MenuItem value={'date'}>Date</MenuItem>
+                                        <MenuItem value={'array'}>Array</MenuItem>
                                     </Select>
                                 </Grid>
                                 <Grid item xs={1}>
